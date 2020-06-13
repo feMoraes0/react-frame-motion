@@ -15,7 +15,8 @@ const Home = () => {
       </h2>
       <Link to="/base">
         <motion.button
-          animate={{}}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: 'spring', stiffness: 300 }}
         >
           Create Your Pizza
         </motion.button>
