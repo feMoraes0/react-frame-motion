@@ -1,21 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-const baseContainerVariants = {
-  initial: {
-    opacity: 0,
-    x: '100vw'
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 120
-    }
-  }
-}
+import { rightToLeftVariants } from '../utilities/framer-variants';
+import { scaleButton, scaleYellowText } from '../utilities/framer-animation';
 
 const baseNextVariants = {
   initial: {
@@ -36,7 +23,7 @@ const Base = ({ addBase, pizza }) => {
   return (
     <motion.div
       className="base container"
-      variants={baseContainerVariants}
+      variants={rightToLeftVariants}
       initial="initial"
       animate="animate"
     >
@@ -46,8 +33,8 @@ const Base = ({ addBase, pizza }) => {
           let spanClass = pizza.base === base ? 'active' : '';
           return (
             <motion.li key={base} onClick={() => addBase(base)}
-              whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              whileHover={scaleYellowText.whileHover}
+              transition={scaleYellowText.transition}
             >
               <span className={spanClass}>{ base }</span>
             </motion.li>
@@ -64,8 +51,8 @@ const Base = ({ addBase, pizza }) => {
         >
           <Link to="/toppings">
             <motion.button
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              whileHover={scaleButton.whileHover}
+              transition={scaleButton.transition}
             >Next</motion.button>
           </Link>
         </motion.div>
