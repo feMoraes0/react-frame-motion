@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { buttonVariants } from '../utilities/framer-variants';
 
 const homeVariants = {
   initial: {
@@ -12,12 +13,6 @@ const homeVariants = {
       delay: 1.5,
       duration: 1.5
     }
-  }
-}
-
-const buttonVariants = {
-  hover: {
-    scale: [1, 1.1, 1, 1.1, 1],
   }
 }
 
@@ -35,6 +30,7 @@ const Home = () => {
       <Link to="/base">
         <motion.button
           variants={buttonVariants}
+          initial="initial"
           whileHover="hover"
         >
           Create Your Pizza

@@ -15,7 +15,7 @@ const orderContainerVariants = {
       mass: 0.4,
       damping: 8,
       when: "beforeChildren",
-      staggerChildren: 0.4
+      staggerChildren: 0.2
     }
   }
 }

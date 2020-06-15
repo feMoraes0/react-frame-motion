@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { rightToLeftVariants } from '../utilities/framer-variants';
-import { scaleButton, scaleYellowText } from '../utilities/framer-animation';
+import { rightToLeftVariants, buttonVariants } from '../utilities/framer-variants';
+import { scaleYellowText } from '../utilities/framer-animation';
 
 const Toppings = ({ addTopping, pizza }) => {
   let toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
@@ -14,7 +14,6 @@ const Toppings = ({ addTopping, pizza }) => {
       initial="initial"
       animate="animate"
     >
-      
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {toppings.map(topping => {
@@ -29,11 +28,10 @@ const Toppings = ({ addTopping, pizza }) => {
           )
         })}
       </ul>
-
       <Link to="/order">
-        <motion.button 
-          whileHover={scaleButton.whileHover}
-          transition={scaleButton.transition}
+        <motion.button
+          variants={buttonVariants}
+          whileHover="hover"
         >
           Order
         </motion.button>

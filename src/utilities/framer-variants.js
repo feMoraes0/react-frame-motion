@@ -27,7 +27,18 @@ const hideToShowVariants = {
   }
 }
 
+const buttonVariants = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      duration: 0.3,
+      yoyo: Infinity,
+    }
+  }
+}
+
 export {
   rightToLeftVariants,
   hideToShowVariants,
+  buttonVariants
 };

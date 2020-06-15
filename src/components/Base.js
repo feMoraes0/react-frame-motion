@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { rightToLeftVariants } from '../utilities/framer-variants';
-import { scaleButton, scaleYellowText } from '../utilities/framer-animation';
+import { rightToLeftVariants, buttonVariants } from '../utilities/framer-variants';
+import { scaleYellowText } from '../utilities/framer-animation';
 
 const baseNextVariants = {
   initial: {
@@ -51,8 +51,8 @@ const Base = ({ addBase, pizza }) => {
         >
           <Link to="/toppings">
             <motion.button
-              whileHover={scaleButton.whileHover}
-              transition={scaleButton.transition}
+              variants={buttonVariants}
+              whileHover="hover"
             >Next</motion.button>
           </Link>
         </motion.div>
