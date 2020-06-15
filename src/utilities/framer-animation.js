@@ -1,13 +1,3 @@
-const scaleButton = {
-  whileHover: {
-    scale: 1.1,
-  },
-  transition: {
-    type: 'spring',
-    stiffness: 300
-  }
-}
-
 const scaleYellowText = {
   whileHover: {
     scale: 1.3,
@@ -21,6 +11,5 @@ const scaleYellowText = {
 }
 
 export {
-  scaleButton,
   scaleYellowText,
 }
