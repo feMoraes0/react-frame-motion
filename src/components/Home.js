@@ -13,6 +13,9 @@ const homeVariants = {
       delay: 1.5,
       duration: 1.5
     }
+  },
+  exit: {
+    x: '-100vw'
   }
 }
 
@@ -23,6 +26,7 @@ const Home = () => {
       variants={homeVariants}
       initial="initial"
       animate="animate"
+      exit="exit"
     >
       <h2>
         Welcome to Pizza Joint
