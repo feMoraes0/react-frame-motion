@@ -13,7 +13,8 @@ const backdropVariant = {
 const Modal = ({showModal, setShowModal}) => {
   return (
     <AnimatePresence>
-      <motion.div
+      { showModal && (
+        <motion.div
         className='backdrop'
         variants={backdropVariant}
         initial='initial'
@@ -21,6 +22,7 @@ const Modal = ({showModal, setShowModal}) => {
       >
 
       </motion.div>
+      )}
     </AnimatePresence>
   );
 }
